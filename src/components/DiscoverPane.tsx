@@ -835,7 +835,7 @@ export default class DiscoverPane extends Component<{globalState: {state: any}}>
 
 						const movies = await search(name);
 						
-						const movie = movies.find(x => x.title === name);
+						const movie = movies.find(x => x.title.toLowerCase() === name.toLowerCase());
 						
 						return movie.tmdbUrl;
 						
